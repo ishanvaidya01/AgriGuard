@@ -1,124 +1,132 @@
-# 🌱 AgriGuard - Crop Disease Detection Web App
+<div align="center">
+  
+# AgriGuard
 
-## 📌 Overview
+**The Next-Generation AI-Powered Crop Health Assistant**
 
-**AgriGuard** is an AI-powered web application that helps farmers identify and manage crop diseases. Users can upload images of crop leaves, and the app predicts diseases with preventive measures (both organic and inorganic). The platform also aims to reduce middlemen between farmers and buyers.
+[![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/)
+[![AI Powered](https://img.shields.io/badge/AI-Powered-purple.svg?style=for-the-badge)](#)
 
-### 🏆 Achievement
-- **IEEE Promptathon Hackathon - 3rd Prize** (Team 916X3)
+*AgriGuard is an intelligent, real-time crop disease diagnostic platform that goes beyond simple image classification. It uses deep learning and regional intelligence to help farmers identify crop diseases early and provides actionable, customized organic and inorganic remedies.*
 
----
+[Features](#features) • [Why AgriGuard?](#how-agriguard-beats-the-competition) • [Architecture](#architecture) • [Deployment Status](#deployment-status) • [Getting Started](#getting-started)
 
-## 🎯 Problem Statement
+**🏆 IEEE Promptathon Hackathon - 3rd Prize (Team 916X3)**
 
-Farmers often struggle to identify crop diseases early, leading to significant crop loss. Access to expert advice and direct market connections is limited for small-scale farmers.
-
----
-
-## ✨ Features
-
-- 🖼️ **Image Upload**: Upload crop leaf images for disease diagnosis
-- 🤖 **AI-Powered Predictions**: Machine learning model identifies crop diseases
-- 💡 **Preventive Measures**: Organic and inorganic treatment recommendations
-- 🏪 **Market Connection**: Reduce middlemen by connecting farmers directly with buyers
-- 📱 **User-Friendly Interface**: Simple and intuitive web interface
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask/Django)
-- **ML Model**: TensorFlow / Keras (crop disease classification)
-- **Database**: (Database technology used)
-- **Deployment**: (Hosting platform if deployed)
-
----
-
-## 👥 Team
-
-**Team 916X3**
-- Ishan Vaidya - Frontend & Backend Integration
-- (Other team members)
+- **Instant AI-Powered Diagnosis**: Upload a photo of a crop leaf and our TensorFlow-powered AI instantly predicts the disease with granular confidence scoring.
+- **Regional Disease Mapping**: An interactive Leaflet map that shows the top 5 most common diseases specific to your exact state or region, keeping farmers aware of local outbreaks.
+- **Tailored Remedy Engine**: For every detected disease, the platform provides step-by-step actionable advice, dynamically split into **🌱 Organic** (bio-inputs) and **🧪 Inorganic** (chemical) approaches.
+- **Market Connections (Kisaan Mart)**: Seamlessly connects farmers to direct-buyer marketplaces to reduce middlemen and maximize agricultural profits.
+- **Localized Smart Ads**: Embedded marketplace features that dynamically suggest relevant farming tools and fertilizers based on the user's region and diagnosed diseases.
+- **Premium Glassmorphism UI**: A vibrant, animated, and highly responsive user interface designed to feel modern, approachable, and fast on both mobile and desktop devices.
 
 ---
 
-## 📂 Project Structure
+## How AgriGuard Beats the Competition
 
-```
-AgriGuard/
-├── frontend/          # Web UI (HTML, CSS, JS)
-├── backend/           # Backend API (Python)
-├── ml_model/          # ML model files
-├── database/          # Database scripts
-└── README.md          # This file
-```
+While there are other farming apps available, they often fail to bridge the gap between complex AI and actionable, localized advice for the everyday farmer. Here's how AgriGuard stands out:
+
+| Feature | AgriGuard | Generic Farming Apps |
+|---------|-----------|----------------------|
+| **Core Metric** | Deep Learning Diagnosis + Regional Context | Basic Image Search |
+| **Remedy Approach** | Dual-track (Organic & Inorganic steps) | Generic chemical advice |
+| **User Experience** | Glassmorphic, highly animated, zero-friction | Cluttered, ad-heavy, complex |
+| **Local Awareness** | Interactive state-by-state disease tracking | One-size-fits-all database |
+| **Market Integration**| Direct link to Kisaan Mart & tool shops | No economic integration |
+
+**In short:** Other apps just tell you what's wrong. **AgriGuard acts as your intelligent agronomist and business partner.**
 
 ---
 
-## 🚀 Getting Started
+## Architecture
+
+AgriGuard is built on a clean, decoupled architecture designed for blazing-fast AI inference and seamless user experiences.
+
+### Decoupled AI Engine
+At the heart of the platform is the **FastAPI Prediction Engine**. Instead of bloat on the frontend, the UI is incredibly lightweight. The heavy lifting is offloaded to a Python backend running a highly optimized TensorFlow model trained on the PlantVillage dataset.
+- **The true state of the crop is evaluated in milliseconds.**
+- This allows for incredibly fast scaling and the ability to update the AI model on the fly without ever pushing frontend updates.
+
+### Tech Stack
+* **Frontend:**
+  * **Vanilla JavaScript & HTML5** for lightning-fast, dependency-free UI rendering.
+  * **Vanilla CSS** utilizing a premium design system (Glassmorphism, rich gradients, dynamic particle backgrounds, and fluid micro-animations).
+  * **Leaflet.js** for interactive geographic mapping.
+* **Backend:**
+  * **FastAPI** for robust, high-performance API endpoints and handling image uploads asynchronously.
+  * **TensorFlow & Keras** for deep learning image preprocessing and classification.
+  * **Uvicorn** as the lightning-fast ASGI web server.
+
+---
+
+## Deployment Status
+
+**AgriGuard is currently configured for local development and edge deployment.**
+
+The frontend is fully statically generated and can be deployed easily on free static tiers (like GitHub Pages, Netlify, or Vercel). The backend AI engine is currently deployed on Render (`viridion-s.onrender.com`), but the repository includes all the necessary code to run the backend locally on your own machine. 
+
+To experience the full power of the AI model with zero latency, local execution of the backend is recommended!
+
+---
+
+## Getting Started
 
 ### Prerequisites
-- Python 3.7+
-- Flask/Django
-- TensorFlow or Keras
+- Python (3.11+)
+- Node.js / HTTP Server (Optional, for serving frontend locally)
 
-### Installation
-
+### 1. Clone the repository
 ```bash
-# Clone the repository
 git clone https://github.com/ishanvaidya01/AgriGuard.git
 cd AgriGuard
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python app.py
 ```
 
-### Usage
+### 2. Backend Setup
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 
-1. Open the web application in your browser
-2. Upload a clear image of the affected crop leaf
-3. Click "Analyze" to detect the disease
-4. View the diagnosis and recommended treatment measures
-5. (Optional) Connect with nearby buyers
+# Start the FastAPI development server
+python main.py
+```
+*The API will be available at `http://localhost:8000`*
 
----
-
-## 📊 Model Performance
-
-- Accuracy: (Add model accuracy if available)
-- Diseases Detected: (Number of crop diseases the model can identify)
-- Support Crops: (List of supported crops)
-
----
-
-## 🔮 Future Enhancements
-
-- Real-time disease monitoring using mobile cameras
-- Integration with IoT sensors for soil health monitoring
-- Weather-based crop recommendations
-- Direct payment gateway for buyer-farmer transactions
-- Mobile app (iOS/Android)
+### 3. Frontend Setup
+Because the frontend is built with Vanilla JS, no build step is required! 
+Simply serve the `frontend/` directory using any static file server:
+```bash
+# Using Python's built-in server
+cd frontend
+python -m http.server 3000
+```
+*Then open `http://localhost:3000` in your browser.*
 
 ---
 
-## 📄 License
+## UI/UX Design Philosophy
 
-This project is open source and available under the MIT License.
-
----
-
-## 📞 Contact
-
-- **GitHub**: [ishanvaidya01](https://github.com/ishanvaidya01)
-- **LinkedIn**: [Ishan Vaidya](https://linkedin.com/in/ishanvaidya-cse)
-- **Email**: ishan.vaidya01@gmail.com
+AgriGuard was designed with a premium, vibrant aesthetic tailored to feel fresh and organic. 
+- We completely avoid generic enterprise colors, utilizing curated green/teal HSL palettes and sleek glassmorphism.
+- Every interaction—from uploading a leaf to viewing the results—is accompanied by subtle micro-animations to ensure the application feels responsive, dynamic, and alive.
 
 ---
 
-## 🙏 Acknowledgments
+## 👥 Team 916X3
+- **Ishan Vaidya** - Frontend & Backend Integration
+- *(IEEE Promptathon Hackathon)*
 
-Thanks to the IEEE Club for organizing the Promptathon hackathon and providing the platform to showcase this project.
+---
+
+<div align="center">
+  <i>Built with passion for the future of sustainable farming.</i>
+</div>
