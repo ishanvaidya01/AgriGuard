@@ -1,0 +1,5 @@
+backend/model/dataset_raw/
+backend/model/model_output/*.h5
+backend/__pycache__/
+__pycache__/
+*.pyc
