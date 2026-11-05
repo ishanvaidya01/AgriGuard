@@ -8,7 +8,6 @@ __pycache__/
 .venv/
 venv/
 env/
-.env
 
 # Temporary uploads created by the API
 backend/model/temp_*
@@ -23,3 +22,5 @@ backend/model/temp_*
 .DS_Store
 Thumbs.db
 
+config.bat
+node_modules
