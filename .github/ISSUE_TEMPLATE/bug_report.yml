@@ -1,0 +1,88 @@
+name: Bug report
+description: Report a problem with prediction, the upload flow, or local setup
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Remove personal data from screenshots and
+        do not upload a private image or a model file directly to this issue.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start the backend with `python backend/main.py`
+        2. Serve `frontend/` on port 3000
+        3. Upload a JPG of a tomato leaf
+        4. Observe ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Prediction or model output
+        - Upload / frontend validation
+        - Backend startup or model loading
+        - Regional disease page / remedies
+        - Styling or responsive layout
+        - Documentation or deployment
+    validations:
+      required: true
+  - type: dropdown
+    id: model
+    attributes:
+      label: Model checkpoint
+      options:
+        - Trained locally with `train_model.py`
+        - Supplied an existing `crop_disease_model.h5`
+        - No model file present
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.11.9"
+  - type: input
+    id: tensorflow
+    attributes:
+      label: TensorFlow version
+      placeholder: "2.20.0"
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: Chrome 140 on Windows 11
+  - type: textarea
+    id: logs
+    attributes:
+      label: Backend traceback or browser console output
+      description: Redact personal data and any local paths you do not want to share.
+      render: shell
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Class labels, confidence values, or screenshots that help explain the issue.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues before opening this report.
+          required: true
+        - label: I removed personal data and secrets from this report.
+          required: true

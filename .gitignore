@@ -3,3 +3,23 @@ backend/model/model_output/*.h5
 backend/__pycache__/
 __pycache__/
 *.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# Temporary uploads created by the API
+backend/model/temp_*
+
+# Tooling and deployment output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.netlify/
+
+# OS files
+.DS_Store
+Thumbs.db
+

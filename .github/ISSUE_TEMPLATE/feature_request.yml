@@ -1,0 +1,58 @@
+name: Feature request
+description: Suggest a model, UI, accessibility, or deployment improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AgriGuard is a hackathon prototype. Please describe the user problem
+        first, and state whether the proposal requires new data, a larger model,
+        or a new hosted service.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Who is affected, and what is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the change and how it fits the current static frontend and FastAPI backend.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Model coverage or accuracy
+        - Upload and inference flow
+        - Regional disease information
+        - Remedies and resource links
+        - Accessibility and mobile UX
+        - Deployment and operations
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data or model implications
+      description: Mention new classes, dataset licensing, annotation needs, or compute requirements.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues before opening this request.
+          required: true
+        - label: The request does not present the model as a substitute for professional agronomic advice.
+          required: true
